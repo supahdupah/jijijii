@@ -1,0 +1,18 @@
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node (if you use npm packages later)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Build
+dist/
+build/
