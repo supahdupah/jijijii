@@ -1,70 +1,169 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>supahdupah - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed-variant": "#3b3b3b",
+              "on-surface-variant": "#474747",
+              "surface-container-highest": "#e2e2e2",
+              "on-primary": "#e2e2e2",
+              "inverse-primary": "#c6c6c6",
+              "outline": "#777777",
+              "surface-container": "#eeeeee",
+              "secondary-container": "#d4d4d4",
+              "tertiary-fixed": "#5e5e5e",
+              "inverse-on-surface": "#f0f1f1",
+              "surface-bright": "#f9f9f9",
+              "primary-fixed": "#5e5e5e",
+              "tertiary-fixed-dim": "#474747",
+              "inverse-surface": "#2f3131",
+              "on-primary-fixed-variant": "#e2e2e2",
+              "surface-variant": "#e2e2e2",
+              "primary-fixed-dim": "#474747",
+              "on-tertiary": "#e2e2e2",
+              "error": "#ba1a1a",
+              "on-error": "#ffffff",
+              "surface-dim": "#dadada",
+              "surface-container-high": "#e8e8e8",
+              "primary-container": "#3b3b3b",
+              "surface-container-lowest": "#ffffff",
+              "secondary-fixed-dim": "#ababab",
+              "on-tertiary-fixed-variant": "#e2e2e2",
+              "tertiary": "#3b3b3b",
+              "surface-container-low": "#f3f3f4",
+              "surface-tint": "#5e5e5e",
+              "on-secondary-container": "#1b1b1b",
+              "primary": "#000000",
+              "on-background": "#1a1c1c",
+              "tertiary-container": "#747474",
+              "outline-variant": "#c6c6c6",
+              "background": "#f9f9f9",
+              "error-container": "#ffdad6",
+              "on-tertiary-container": "#ffffff",
+              "on-secondary-fixed": "#1b1b1b",
+              "on-primary-container": "#ffffff",
+              "on-error-container": "#410002",
+              "on-tertiary-fixed": "#ffffff",
+              "secondary-fixed": "#c6c6c6",
+              "on-primary-fixed": "#ffffff",
+              "on-secondary": "#ffffff",
+              "on-surface": "#1a1c1c",
+              "surface": "#f9f9f9",
+              "secondary": "#5e5e5e"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #f9f9f9;
+            color: #1a1c1c;
+            margin: 0;
+            overflow: hidden;
+        }
+        .candelabra-line {
+            stroke: #1a1c1c;
+            stroke-width: 0.5;
+            fill: none;
+        }
+        .flame-btn:hover .flame-icon {
+            transform: translateY(-4px) scale(1.1);
+            color: #000000;
+        }
+        .flame-btn:hover .flame-label {
+            opacity: 1;
+            letter-spacing: 0.3em;
+        }
+    </style>
 </head>
-<body>
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">supahdupah</div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#jijijii">jijijii</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <header class="hero">
-        <div class="container">
-            <h1>Welcome to My Portfolio</h1>
-            <p>Creating awesome projects and sharing my work</p>
-        </div>
-    </header>
-
-    <section id="about" class="section">
-        <div class="container">
-            <h2>About Me</h2>
-            <div class="content">
-                <p>Hi! I'm supahdupah, a developer passionate about building interesting projects and sharing my work with the community. This is my space to showcase what I'm working on and connect with others.</p>
-                <p>I believe in creating clean, functional code and learning from every project along the way.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="jijijii" class="section">
-        <div class="container">
-            <h2>jijijii Project</h2>
-            <div class="content">
-                <p>jijijii is one of my key projects. This is where I showcase my work and demonstrate my skills in development.</p>
-                <div class="project-info">
-                    <p><strong>Description:</strong> Add details about your jijijii project here.</p>
-                    <p><strong>Technologies:</strong> Add the tech stack you used.</p>
-                    <p><a href="https://github.com/supahdupah/jijijii" target="_blank" class="btn">View on GitHub</a></p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>Get In Touch</h2>
-            <div class="content">
-                <p>Feel free to reach out to me on GitHub or through other channels.</p>
-                <ul class="social-links">
-                    <li><a href="https://github.com/supahdupah" target="_blank">GitHub</a></li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 supahdupah. All rights reserved.</p>
-        </div>
-    </footer>
-</body>
-</html>
+<body class="font-body selection:bg-surface-container-high">
+<!-- TopAppBar from JSON -->
+<nav class="fixed top-0 w-full bg-transparent backdrop-blur-xl flex justify-between items-center px-12 py-8 w-full z-50">
+<div class="text-2xl font-black tracking-tighter text-zinc-900 dark:text-zinc-100" style="">j i j i jii</div>
+<div class="flex gap-12">
+<a class="font-inter tracking-tighter text-sm uppercase text-zinc-900 dark:text-zinc-100 font-bold underline underline-offset-8 transition-colors duration-300" href="#" style="">The Flame</a>
+<a class="font-inter tracking-tighter text-sm uppercase text-zinc-400 dark:text-zinc-600 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300" href="#" style="">WAX</a>
+<a class="font-inter tracking-tighter text-sm uppercase text-zinc-400 dark:text-zinc-600 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300" href="#" style="">WICK</a>
+</div>
+<button class="material-symbols-outlined text-zinc-900 dark:text-zinc-100 scale-95 duration-200" data-icon="menu" style="">menu</button>
+</nav>
+<!-- Main Canvas: The Silent Architect focus -->
+<main class="relative h-screen w-screen flex items-center justify-center bg-surface">
+<!-- Candelabra Illustration Container -->
+<div class="relative w-[600px] h-[500px] flex flex-col items-center justify-end pb-24">
+<!-- SVG Candelabra Lines -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 600 500">
+<!-- Base stem -->
+<path class="candelabra-line" d="M300 480 L300 350"></path>
+<!-- Wide Arch for outer candles -->
+<path class="candelabra-line" d="M100 250 Q100 380 300 380 Q500 380 500 250"></path>
+<!-- Inner Arch for middle candles -->
+<path class="candelabra-line" d="M200 220 Q200 320 300 320 Q400 320 400 220"></path>
+<!-- Individual Candle Holders -->
+<line class="candelabra-line" x1="100" x2="100" y1="250" y2="230"></line>
+<line class="candelabra-line" x1="200" x2="200" y1="220" y2="200"></line>
+<line class="candelabra-line" x1="300" x2="300" y1="350" y2="150"></line>
+<line class="candelabra-line" x1="400" x2="400" y1="220" y2="200"></line>
+<line class="candelabra-line" x1="500" x2="500" y1="250" y2="230"></line>
+</svg>
+<!-- Interactive Flame Buttons (Mapped to Navigation) -->
+<!-- 1. Origin (Far Left) -->
+<div class="absolute left-[100px] top-[180px] -translate-x-1/2 flex flex-col items-center flame-btn cursor-pointer transition-all duration-500">
+<span class="flame-label opacity-0 text-[10px] tracking-[0.2em] uppercase mb-4 transition-all duration-500" style="">Origin</span>
+<span class="material-symbols-outlined flame-icon text-3xl text-zinc-400 transition-all duration-500" data-icon="local_fire_department" style="font-variation-settings: &quot;FILL&quot; 1;">local_fire_department</span>
+</div>
+<!-- 2. Essence (Mid Left) -->
+<div class="absolute left-[200px] top-[150px] -translate-x-1/2 flex flex-col items-center flame-btn cursor-pointer transition-all duration-500">
+<span class="flame-label opacity-0 text-[10px] tracking-[0.2em] uppercase mb-4 transition-all duration-500" style="">MAGS</span>
+<span class="material-symbols-outlined flame-icon text-3xl text-zinc-400 transition-all duration-500" data-icon="local_fire_department" style="font-variation-settings: &quot;FILL&quot; 1;">local_fire_department</span>
+</div>
+<!-- 3. Legacy (Center) -->
+<div class="absolute left-[300px] top-[100px] -translate-x-1/2 flex flex-col items-center flame-btn cursor-pointer transition-all duration-500">
+<span class="flame-label opacity-0 text-[10px] tracking-[0.2em] uppercase mb-4 transition-all duration-500" style="">Legacy</span>
+<span class="material-symbols-outlined flame-icon text-4xl text-zinc-900 transition-all duration-500" data-icon="local_fire_department" style="font-variation-settings: &quot;FILL&quot; 1;">local_fire_department</span>
+</div>
+<!-- 4. Curation (Mid Right) -->
+<div class="absolute left-[400px] top-[150px] -translate-x-1/2 flex flex-col items-center flame-btn cursor-pointer transition-all duration-500">
+<span class="flame-label opacity-0 text-[10px] tracking-[0.2em] uppercase mb-4 transition-all duration-500" style="">SHOOTS</span>
+<span class="material-symbols-outlined flame-icon text-3xl text-zinc-400 transition-all duration-500" data-icon="local_fire_department" style="font-variation-settings: &quot;FILL&quot; 1;">local_fire_department</span>
+</div>
+<!-- 5. Silence (Far Right) -->
+<div class="absolute left-[500px] top-[180px] -translate-x-1/2 flex flex-col items-center flame-btn cursor-pointer transition-all duration-500">
+<span class="flame-label opacity-0 text-[10px] tracking-[0.2em] uppercase mb-4 transition-all duration-500" style="">CLOTHES</span>
+<span class="material-symbols-outlined flame-icon text-3xl text-zinc-400 transition-all duration-500" data-icon="local_fire_department" style="font-variation-settings: &quot;FILL&quot; 1;">local_fire_department</span>
+</div>
+<!-- Descriptive Text -->
+<div class="absolute -bottom-12 w-full text-center">
+<h1 class="display-sm font-light tracking-tight Inter text-zinc-900" style="">{}(o){|| || || || || || |||| || || || || || ||}(o){}</h1>
+<p class="text-[10px] tracking-[0.4em] uppercase text-zinc-400 mt-4" style="">ilumina tu camino ProteGE tu fortuna</p>
+</div>
+</div>
+</main>
+<!-- Footer from JSON -->
+<footer class="fixed bottom-0 w-full flex justify-between px-12 py-10 bg-transparent z-50">
+<div class="text-[10px] tracking-[0.2em] uppercase text-zinc-400 dark:text-zinc-600" style="">© 2026 || ZZ</div>
+<div class="flex gap-10">
+<a class="text-[10px] tracking-[0.2em] uppercase text-zinc-400 dark:text-zinc-600 hover:text-zinc-900 dark:hover:text-zinc-100 underline transition-all opacity-80 hover:opacity-100" href="#" style="">Privacy</a>
+<a class="text-[10px] tracking-[0.2em] uppercase text-zinc-400 dark:text-zinc-600 hover:text-zinc-900 dark:hover:text-zinc-100 underline transition-all opacity-80 hover:opacity-100" href="#" style="">Terms</a>
+<a class="text-[10px] tracking-[0.2em] uppercase text-zinc-400 dark:text-zinc-600 hover:text-zinc-900 dark:hover:text-zinc-100 underline transition-all opacity-80 hover:opacity-100" href="#" style="">Archive</a>
+</div>
+</footer>
+</body></html>
