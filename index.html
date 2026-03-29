@@ -96,14 +96,14 @@
 </head>
 <body class="font-body selection:bg-surface-container-high">
 <!-- TopAppBar from JSON -->
-<nav class="fixed top-0 w-full bg-transparent backdrop-blur-xl flex justify-between items-center px-4 sm:px-8 md:px-12 py-6 md:py-8 w-full z-50">
+<nav class="fixed top-0 w-full bg-transparent backdrop-blur-xl flex justify-center items-center px-4 sm:px-8 md:px-12 py-6 md:py-8 z-50">
 <div class="text-lg sm:text-2xl font-black tracking-tighter text-zinc-900 dark:text-zinc-100" style="">j i j i jii</div>
-<div class="hidden md:flex gap-6 md:gap-12">
+<div class="hidden md:flex gap-6 md:gap-12 absolute right-12">
 <a class="font-inter tracking-tighter text-xs md:text-sm uppercase text-zinc-900 dark:text-zinc-100 font-bold underline underline-offset-8 transition-colors duration-300" href="#" style="">The Flame</a>
 <a class="font-inter tracking-tighter text-xs md:text-sm uppercase text-zinc-400 dark:text-zinc-600 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300" href="#" style="">WAX</a>
 <a class="font-inter tracking-tighter text-xs md:text-sm uppercase text-zinc-400 dark:text-zinc-600 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300" href="#" style="">WICK</a>
 </div>
-<button id="menu-button" class="md:hidden material-symbols-outlined text-zinc-900 dark:text-zinc-100 scale-95 duration-200" data-icon="menu" style="">menu</button>
+<button id="menu-button" class="md:hidden material-symbols-outlined text-zinc-900 dark:text-zinc-100 scale-95 duration-200 absolute right-4" data-icon="menu" style="">menu</button>
 </nav>
 
 <!-- Mobile Menu -->
@@ -135,27 +135,27 @@
 </svg>
 <!-- Interactive Flame Buttons (Mapped to Navigation) -->
 <!-- 1. Origin (Far Left) -->
-<div class="absolute left-[16.67%] top-[36%] -translate-x-1/2 flex flex-col items-center flame-btn cursor-pointer transition-all duration-500">
+<div class="absolute left-[16.67%] top-[38%] -translate-x-1/2 flex flex-col items-center flame-btn cursor-pointer transition-all duration-500">
 <span class="flame-label opacity-0 text-[8px] sm:text-[10px] tracking-[0.2em] uppercase mb-2 sm:mb-4 transition-all duration-500" style="">Origin</span>
 <span class="material-symbols-outlined flame-icon text-2xl sm:text-3xl text-zinc-400 transition-all duration-500" data-icon="local_fire_department" style="font-variation-settings: &quot;FILL&quot; 1;">local_fire_department</span>
 </div>
 <!-- 2. Essence (Mid Left) -->
-<div class="absolute left-[33.33%] top-[30%] -translate-x-1/2 flex flex-col items-center flame-btn cursor-pointer transition-all duration-500">
+<div class="absolute left-[33.33%] top-[32%] -translate-x-1/2 flex flex-col items-center flame-btn cursor-pointer transition-all duration-500">
 <span class="flame-label opacity-0 text-[8px] sm:text-[10px] tracking-[0.2em] uppercase mb-2 sm:mb-4 transition-all duration-500" style="">MAGS</span>
 <span class="material-symbols-outlined flame-icon text-2xl sm:text-3xl text-zinc-400 transition-all duration-500" data-icon="local_fire_department" style="font-variation-settings: &quot;FILL&quot; 1;">local_fire_department</span>
 </div>
 <!-- 3. Legacy (Center) -->
-<div class="absolute left-1/2 top-[20%] -translate-x-1/2 flex flex-col items-center flame-btn cursor-pointer transition-all duration-500">
+<div class="absolute left-1/2 top-[22%] -translate-x-1/2 flex flex-col items-center flame-btn cursor-pointer transition-all duration-500">
 <span class="flame-label opacity-0 text-[8px] sm:text-[10px] tracking-[0.2em] uppercase mb-2 sm:mb-4 transition-all duration-500" style="">Legacy</span>
 <span class="material-symbols-outlined flame-icon text-3xl sm:text-4xl text-zinc-900 transition-all duration-500" data-icon="local_fire_department" style="font-variation-settings: &quot;FILL&quot; 1;">local_fire_department</span>
 </div>
 <!-- 4. Curation (Mid Right) -->
-<div class="absolute left-[66.67%] top-[30%] -translate-x-1/2 flex flex-col items-center flame-btn cursor-pointer transition-all duration-500">
+<div class="absolute left-[66.67%] top-[32%] -translate-x-1/2 flex flex-col items-center flame-btn cursor-pointer transition-all duration-500">
 <span class="flame-label opacity-0 text-[8px] sm:text-[10px] tracking-[0.2em] uppercase mb-2 sm:mb-4 transition-all duration-500" style="">SHOOTS</span>
 <span class="material-symbols-outlined flame-icon text-2xl sm:text-3xl text-zinc-400 transition-all duration-500" data-icon="local_fire_department" style="font-variation-settings: &quot;FILL&quot; 1;">local_fire_department</span>
 </div>
 <!-- 5. Silence (Far Right) -->
-<div class="absolute left-[83.33%] top-[36%] -translate-x-1/2 flex flex-col items-center flame-btn cursor-pointer transition-all duration-500">
+<div class="absolute left-[83.33%] top-[38%] -translate-x-1/2 flex flex-col items-center flame-btn cursor-pointer transition-all duration-500">
 <span class="flame-label opacity-0 text-[8px] sm:text-[10px] tracking-[0.2em] uppercase mb-2 sm:mb-4 transition-all duration-500" style="">CLOTHES</span>
 <span class="material-symbols-outlined flame-icon text-2xl sm:text-3xl text-zinc-400 transition-all duration-500" data-icon="local_fire_department" style="font-variation-settings: &quot;FILL&quot; 1;">local_fire_department</span>
 </div>
