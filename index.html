@@ -96,21 +96,30 @@
 </head>
 <body class="font-body selection:bg-surface-container-high">
 <!-- TopAppBar from JSON -->
-<nav class="fixed top-0 w-full bg-transparent backdrop-blur-xl flex justify-between items-center px-12 py-8 w-full z-50">
-<div class="text-2xl font-black tracking-tighter text-zinc-900 dark:text-zinc-100" style="">j i j i jii</div>
-<div class="flex gap-12">
-<a class="font-inter tracking-tighter text-sm uppercase text-zinc-900 dark:text-zinc-100 font-bold underline underline-offset-8 transition-colors duration-300" href="#" style="">The Flame</a>
+<nav class="fixed top-0 w-full bg-transparent backdrop-blur-xl flex justify-between items-center px-4 sm:px-8 md:px-12 py-6 md:py-8 w-full z-50">
+<div class="text-lg sm:text-2xl font-black tracking-tighter text-zinc-900 dark:text-zinc-100" style="">j i j i jii</div>
+<div class="hidden md:flex gap-6 md:gap-12">
+<a class="font-inter tracking-tighter text-xs md:text-sm uppercase text-zinc-900 dark:text-zinc-100 font-bold underline underline-offset-8 transition-colors duration-300" href="#" style="">The Flame</a>
+<a class="font-inter tracking-tighter text-xs md:text-sm uppercase text-zinc-400 dark:text-zinc-600 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300" href="#" style="">WAX</a>
+<a class="font-inter tracking-tighter text-xs md:text-sm uppercase text-zinc-400 dark:text-zinc-600 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300" href="#" style="">WICK</a>
+</div>
+<button id="menu-button" class="md:hidden material-symbols-outlined text-zinc-900 dark:text-zinc-100 scale-95 duration-200" data-icon="menu" style="">menu</button>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="hidden fixed top-16 left-0 right-0 bg-white dark:bg-zinc-800 md:hidden z-40 border-b border-zinc-200 dark:border-zinc-700">
+<div class="flex flex-col p-4 gap-4">
+<a class="font-inter tracking-tighter text-sm uppercase text-zinc-900 dark:text-zinc-100 font-bold transition-colors duration-300" href="#" style="">The Flame</a>
 <a class="font-inter tracking-tighter text-sm uppercase text-zinc-400 dark:text-zinc-600 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300" href="#" style="">WAX</a>
 <a class="font-inter tracking-tighter text-sm uppercase text-zinc-400 dark:text-zinc-600 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300" href="#" style="">WICK</a>
 </div>
-<button class="material-symbols-outlined text-zinc-900 dark:text-zinc-100 scale-95 duration-200" data-icon="menu" style="">menu</button>
-</nav>
+</div>
 <!-- Main Canvas: The Silent Architect focus -->
-<main class="relative h-screen w-screen flex items-center justify-center bg-surface">
+<main class="relative w-full min-h-screen flex items-center justify-center bg-surface pt-32 md:pt-0 pb-32 md:pb-0">
 <!-- Candelabra Illustration Container -->
-<div class="relative w-[600px] h-[500px] flex flex-col items-center justify-end pb-24">
+<div class="relative w-full max-w-4xl aspect-[6/5] flex flex-col items-center justify-end px-4 sm:px-8 pb-16 md:pb-24">
 <!-- SVG Candelabra Lines -->
-<svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 600 500">
+<svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 600 500" preserveAspectRatio="xMidYMid meet">
 <!-- Base stem -->
 <path class="candelabra-line" d="M300 480 L300 350"></path>
 <!-- Wide Arch for outer candles -->
@@ -126,44 +135,76 @@
 </svg>
 <!-- Interactive Flame Buttons (Mapped to Navigation) -->
 <!-- 1. Origin (Far Left) -->
-<div class="absolute left-[100px] top-[180px] -translate-x-1/2 flex flex-col items-center flame-btn cursor-pointer transition-all duration-500">
-<span class="flame-label opacity-0 text-[10px] tracking-[0.2em] uppercase mb-4 transition-all duration-500" style="">Origin</span>
-<span class="material-symbols-outlined flame-icon text-3xl text-zinc-400 transition-all duration-500" data-icon="local_fire_department" style="font-variation-settings: &quot;FILL&quot; 1;">local_fire_department</span>
+<div class="absolute left-[16.67%] top-[36%] -translate-x-1/2 flex flex-col items-center flame-btn cursor-pointer transition-all duration-500">
+<span class="flame-label opacity-0 text-[8px] sm:text-[10px] tracking-[0.2em] uppercase mb-2 sm:mb-4 transition-all duration-500" style="">Origin</span>
+<span class="material-symbols-outlined flame-icon text-2xl sm:text-3xl text-zinc-400 transition-all duration-500" data-icon="local_fire_department" style="font-variation-settings: &quot;FILL&quot; 1;">local_fire_department</span>
 </div>
 <!-- 2. Essence (Mid Left) -->
-<div class="absolute left-[200px] top-[150px] -translate-x-1/2 flex flex-col items-center flame-btn cursor-pointer transition-all duration-500">
-<span class="flame-label opacity-0 text-[10px] tracking-[0.2em] uppercase mb-4 transition-all duration-500" style="">MAGS</span>
-<span class="material-symbols-outlined flame-icon text-3xl text-zinc-400 transition-all duration-500" data-icon="local_fire_department" style="font-variation-settings: &quot;FILL&quot; 1;">local_fire_department</span>
+<div class="absolute left-[33.33%] top-[30%] -translate-x-1/2 flex flex-col items-center flame-btn cursor-pointer transition-all duration-500">
+<span class="flame-label opacity-0 text-[8px] sm:text-[10px] tracking-[0.2em] uppercase mb-2 sm:mb-4 transition-all duration-500" style="">MAGS</span>
+<span class="material-symbols-outlined flame-icon text-2xl sm:text-3xl text-zinc-400 transition-all duration-500" data-icon="local_fire_department" style="font-variation-settings: &quot;FILL&quot; 1;">local_fire_department</span>
 </div>
 <!-- 3. Legacy (Center) -->
-<div class="absolute left-[300px] top-[100px] -translate-x-1/2 flex flex-col items-center flame-btn cursor-pointer transition-all duration-500">
-<span class="flame-label opacity-0 text-[10px] tracking-[0.2em] uppercase mb-4 transition-all duration-500" style="">Legacy</span>
-<span class="material-symbols-outlined flame-icon text-4xl text-zinc-900 transition-all duration-500" data-icon="local_fire_department" style="font-variation-settings: &quot;FILL&quot; 1;">local_fire_department</span>
+<div class="absolute left-1/2 top-[20%] -translate-x-1/2 flex flex-col items-center flame-btn cursor-pointer transition-all duration-500">
+<span class="flame-label opacity-0 text-[8px] sm:text-[10px] tracking-[0.2em] uppercase mb-2 sm:mb-4 transition-all duration-500" style="">Legacy</span>
+<span class="material-symbols-outlined flame-icon text-3xl sm:text-4xl text-zinc-900 transition-all duration-500" data-icon="local_fire_department" style="font-variation-settings: &quot;FILL&quot; 1;">local_fire_department</span>
 </div>
 <!-- 4. Curation (Mid Right) -->
-<div class="absolute left-[400px] top-[150px] -translate-x-1/2 flex flex-col items-center flame-btn cursor-pointer transition-all duration-500">
-<span class="flame-label opacity-0 text-[10px] tracking-[0.2em] uppercase mb-4 transition-all duration-500" style="">SHOOTS</span>
-<span class="material-symbols-outlined flame-icon text-3xl text-zinc-400 transition-all duration-500" data-icon="local_fire_department" style="font-variation-settings: &quot;FILL&quot; 1;">local_fire_department</span>
+<div class="absolute left-[66.67%] top-[30%] -translate-x-1/2 flex flex-col items-center flame-btn cursor-pointer transition-all duration-500">
+<span class="flame-label opacity-0 text-[8px] sm:text-[10px] tracking-[0.2em] uppercase mb-2 sm:mb-4 transition-all duration-500" style="">SHOOTS</span>
+<span class="material-symbols-outlined flame-icon text-2xl sm:text-3xl text-zinc-400 transition-all duration-500" data-icon="local_fire_department" style="font-variation-settings: &quot;FILL&quot; 1;">local_fire_department</span>
 </div>
 <!-- 5. Silence (Far Right) -->
-<div class="absolute left-[500px] top-[180px] -translate-x-1/2 flex flex-col items-center flame-btn cursor-pointer transition-all duration-500">
-<span class="flame-label opacity-0 text-[10px] tracking-[0.2em] uppercase mb-4 transition-all duration-500" style="">CLOTHES</span>
-<span class="material-symbols-outlined flame-icon text-3xl text-zinc-400 transition-all duration-500" data-icon="local_fire_department" style="font-variation-settings: &quot;FILL&quot; 1;">local_fire_department</span>
+<div class="absolute left-[83.33%] top-[36%] -translate-x-1/2 flex flex-col items-center flame-btn cursor-pointer transition-all duration-500">
+<span class="flame-label opacity-0 text-[8px] sm:text-[10px] tracking-[0.2em] uppercase mb-2 sm:mb-4 transition-all duration-500" style="">CLOTHES</span>
+<span class="material-symbols-outlined flame-icon text-2xl sm:text-3xl text-zinc-400 transition-all duration-500" data-icon="local_fire_department" style="font-variation-settings: &quot;FILL&quot; 1;">local_fire_department</span>
 </div>
 <!-- Descriptive Text -->
-<div class="absolute -bottom-12 w-full text-center">
-<h1 class="display-sm font-light tracking-tight Inter text-zinc-900" style="">{}(o){|| || || || || || |||| || || || || || ||}(o){}</h1>
-<p class="text-[10px] tracking-[0.4em] uppercase text-zinc-400 mt-4" style="">ilumina tu camino ProteGE tu fortuna</p>
+<div class="absolute -bottom-8 md:-bottom-12 w-full px-4 text-center">
+<h1 class="display-sm font-light tracking-tight Inter text-xs sm:text-sm md:text-base text-zinc-900" style="">{}(o){|| || || || || || |||| || || || || || ||}(o){}</h1>
+<p class="text-[8px] sm:text-[10px] tracking-[0.4em] uppercase text-zinc-400 mt-2 md:mt-4" style="">ilumina tu camino ProteGE tu fortuna</p>
 </div>
 </div>
 </main>
 <!-- Footer from JSON -->
-<footer class="fixed bottom-0 w-full flex justify-between px-12 py-10 bg-transparent z-50">
-<div class="text-[10px] tracking-[0.2em] uppercase text-zinc-400 dark:text-zinc-600" style="">© 2026 || ZZ</div>
-<div class="flex gap-10">
-<a class="text-[10px] tracking-[0.2em] uppercase text-zinc-400 dark:text-zinc-600 hover:text-zinc-900 dark:hover:text-zinc-100 underline transition-all opacity-80 hover:opacity-100" href="#" style="">Privacy</a>
-<a class="text-[10px] tracking-[0.2em] uppercase text-zinc-400 dark:text-zinc-600 hover:text-zinc-900 dark:hover:text-zinc-100 underline transition-all opacity-80 hover:opacity-100" href="#" style="">Terms</a>
-<a class="text-[10px] tracking-[0.2em] uppercase text-zinc-400 dark:text-zinc-600 hover:text-zinc-900 dark:hover:text-zinc-100 underline transition-all opacity-80 hover:opacity-100" href="#" style="">Archive</a>
+<footer class="fixed bottom-0 w-full flex flex-col md:flex-row justify-between px-4 sm:px-8 md:px-12 py-6 md:py-10 bg-transparent z-50 gap-4">
+<div class="text-[8px] sm:text-[10px] tracking-[0.2em] uppercase text-zinc-400 dark:text-zinc-600" style="">© 2026 || ZZ</div>
+<div class="flex flex-wrap gap-4 sm:gap-6 md:gap-10">
+<a class="text-[8px] sm:text-[10px] tracking-[0.2em] uppercase text-zinc-400 dark:text-zinc-600 hover:text-zinc-900 dark:hover:text-zinc-100 underline transition-all opacity-80 hover:opacity-100" href="#" style="">Privacy</a>
+<a class="text-[8px] sm:text-[10px] tracking-[0.2em] uppercase text-zinc-400 dark:text-zinc-600 hover:text-zinc-900 dark:hover:text-zinc-100 underline transition-all opacity-80 hover:opacity-100" href="#" style="">Terms</a>
+<a class="text-[8px] sm:text-[10px] tracking-[0.2em] uppercase text-zinc-400 dark:text-zinc-600 hover:text-zinc-900 dark:hover:text-zinc-100 underline transition-all opacity-80 hover:opacity-100" href="#" style="">Archive</a>
 </div>
 </footer>
-</body></html>
+
+<script>
+// Mobile menu toggle
+const menuButton = document.getElementById('menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+
+menuButton?.addEventListener('click', () => {
+  mobileMenu?.classList.toggle('hidden');
+});
+
+// Close menu when a link is clicked
+document.querySelectorAll('#mobile-menu a').forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu?.classList.add('hidden');
+  });
+});
+
+// Enhanced flame button interactivity
+const flameButtons = document.querySelectorAll('.flame-btn');
+flameButtons.forEach(btn => {
+  btn.addEventListener('mouseenter', () => {
+    btn.querySelector('.flame-label')?.classList.remove('opacity-0');
+    btn.querySelector('.flame-label')?.classList.add('opacity-100');
+    btn.querySelector('.flame-icon')?.classList.add('scale-125');
+  });
+  
+  btn.addEventListener('mouseleave', () => {
+    btn.querySelector('.flame-label')?.classList.add('opacity-0');
+    btn.querySelector('.flame-label')?.classList.remove('opacity-100');
+    btn.querySelector('.flame-icon')?.classList.remove('scale-125');
+  });
+});
+</script>
