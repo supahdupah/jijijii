@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VOID &amp; VOLUME - STUDIO</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#f9f9f9",
+                        "surface-container-low": "#f3f3f4",
+                        "primary-fixed-dim": "#474747",
+                        "outline": "#777777",
+                        "inverse-surface": "#2f3131",
+                        "on-surface": "#1a1c1c",
+                        "on-secondary-fixed": "#1b1b1b",
+                        "surface-variant": "#e2e2e2",
+                        "primary-container": "#3b3b3b",
+                        "tertiary-container": "#747474",
+                        "on-tertiary-container": "#ffffff",
+                        "on-surface-variant": "#474747",
+                        "inverse-on-surface": "#f0f1f1",
+                        "secondary-fixed-dim": "#ababab",
+                        "on-background": "#1a1c1c",
+                        "tertiary-fixed-dim": "#474747",
+                        "on-primary": "#e2e2e2",
+                        "surface": "#f9f9f9",
+                        "on-secondary-container": "#1b1b1b",
+                        "on-primary-fixed-variant": "#e2e2e2",
+                        "surface-container": "#eeeeee",
+                        "on-secondary-fixed-variant": "#3b3b3b",
+                        "error-container": "#ffdad6",
+                        "on-primary-container": "#ffffff",
+                        "surface-container-highest": "#e2e2e2",
+                        "outline-variant": "#c6c6c6",
+                        "on-tertiary": "#e2e2e2",
+                        "surface-container-lowest": "#ffffff",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed": "#5e5e5e",
+                        "tertiary": "#3b3b3b",
+                        "primary": "#000000",
+                        "secondary-fixed": "#c6c6c6",
+                        "inverse-primary": "#c6c6c6",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed": "#ffffff",
+                        "primary-fixed": "#5e5e5e",
+                        "secondary": "#5e5e5e",
+                        "surface-container-high": "#e8e8e8",
+                        "on-error-container": "#410002",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed-variant": "#e2e2e2",
+                        "on-tertiary-fixed": "#ffffff",
+                        "surface-tint": "#5e5e5e",
+                        "surface-dim": "#dadada",
+                        "secondary-container": "#d4d4d4",
+                        "surface-bright": "#f9f9f9"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "0px"
+                    },
+                    "spacing": {
+                        "4": "1.4rem",
+                        "8": "2.75rem",
+                        "10": "3.5rem",
+                        "12": "4rem",
+                        "16": "5.5rem",
+                        "20": "7rem",
+                        "24": "8.5rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "display": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased min-h-screen flex flex-col pt-32">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 rounded-none bg-zinc-50/80 backdrop-blur-2xl dark:bg-zinc-950/80 text-zinc-900 dark:text-zinc-100 font-['Inter'] tracking-[-0.02em] antialiased bg-zinc-100/10 backdrop-blur-md">
+<div class="flex justify-between items-center w-full px-12 py-10">
+<div class="text-2xl font-black tracking-tighter text-zinc-900 dark:text-zinc-50">
+                VOID &amp; VOLUME
+            </div>
+<ul class="hidden md:flex gap-8 items-center">
+<li>
+<a class="text-zinc-400 dark:text-zinc-600 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors duration-500 opacity-100 active:scale-[0.99] transition-transform" href="#">ARCHIVES</a>
+</li>
+<li>
+<a class="text-zinc-900 dark:text-zinc-50 font-bold hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors duration-500 opacity-100 active:scale-[0.99] transition-transform" href="#">STUDIO</a>
+</li>
+<li>
+<a class="text-zinc-400 dark:text-zinc-600 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors duration-500 opacity-100 active:scale-[0.99] transition-transform" href="#">SERIES</a>
+</li>
+<li>
+<a class="text-zinc-400 dark:text-zinc-600 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors duration-500 opacity-100 active:scale-[0.99] transition-transform" href="#">ABOUT</a>
+</li>
+</ul>
+<div class="flex items-center gap-4">
+<button class="text-zinc-900 dark:text-zinc-100 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors duration-500 opacity-100 active:scale-[0.99] transition-transform">
+<span class="material-symbols-outlined">grid_view</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-[1600px] mx-auto px-6 md:px-12 pb-24">
+<!-- Header -->
+<header class="mb-24 mt-12 md:mt-20">
+<h1 class="text-6xl md:text-8xl font-black tracking-[-0.03em] text-primary uppercase leading-none">STUDIO</h1>
+<p class="text-lg md:text-xl text-on-surface-variant mt-4 max-w-2xl font-body leading-relaxed tracking-tight">An ongoing exploration of form, light, and structured void. Selected works from the archive.</p>
+</header>
+<!-- Gallery Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+<!-- Item 1 (Large) -->
+<article class="col-span-1 md:col-span-2 lg:col-span-2 group relative overflow-hidden bg-surface-container-low">
+<img alt="interior" class="w-full h-[600px] object-cover transition-transform duration-[1.5s] group-hover:scale-105 filter grayscale contrast-125" data-alt="high contrast black and white photography of modern brutalist architecture interior with sharp light rays and deep shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNBbbbNTWo-7pShO8SWb0rB2FU-KKx-3qMEc5-d7t5hLaiOKtcTT-xATvpg-H9I9O_iPp_Q5UfyxWpmQJXjrzha_0hqMxp5W0NvTC9LkI_-sDzs7r7uJ9lSRXoKyrDy9W4lx92g6HTs8fEj5G3OgfTl8pVlDjhM10aLx32gr1tvgupwZL9-Cw3PB84BiKjZZER4VO407pysUn04iA7C_2M1qtvL5jPQQ_jwcf5mWpHXaLpOiFF6oikD9n1fxLpfqAk0angQdmMk84"/>
+<div class="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-black/80 to-transparent flex justify-between items-end">
+<div>
+<span class="text-on-primary text-xs font-bold tracking-[0.2em] uppercase block mb-2">SERIES NO. 01</span>
+<h2 class="text-on-primary text-2xl font-bold tracking-tight">Concrete &amp; Light</h2>
+</div>
+<span class="text-on-primary/60 text-xs tracking-widest uppercase">BERLIN</span>
+</div>
+</article>
+<!-- Item 2 -->
+<article class="col-span-1 group relative overflow-hidden bg-surface-container-low">
+<img alt="facade" class="w-full h-[600px] object-cover transition-transform duration-[1.5s] group-hover:scale-105 filter grayscale contrast-125" data-alt="monochrome abstract close up of modern building facade with repeating geometric patterns and severe shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIyeo7QXHJ4U8yNadaQr2nD0chu0rqbgyiGxkELzWSFze419B-qJ-JsM3DmL_s7by6KOMdD3mLFuXQmv25Y_IWlnmZXJFJEs-tPWgPeSgWKALAVlCslp535DvWZbEHQPnNk-464gEoMEdQzKariBzCnI1n-fZt53L0HbLasRHcVG-esoUejC2CPHxm1cinGhhqJmZyj5jg7MQNcR8dL6o1P-jrTUhsNXh9ZDmTbHc7fFjrU7yri_XhCmcEZIPEkqkH0mmJ7Qd2oOE"/>
+<div class="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end">
+<span class="text-on-primary text-xs font-bold tracking-[0.2em] uppercase block mb-2">SERIES NO. 02</span>
+<h2 class="text-on-primary text-xl font-bold tracking-tight">Geometric Isolation</h2>
+<span class="text-on-primary/60 text-xs tracking-widest uppercase mt-4">TOKYO</span>
+</div>
+</article>
+<!-- Item 3 -->
+<article class="col-span-1 group relative overflow-hidden bg-surface-container-low">
+<img alt="structure" class="w-full h-[500px] object-cover transition-transform duration-[1.5s] group-hover:scale-105 filter grayscale contrast-125" data-alt="low angle shot of towering glass and steel skyscraper in black and white against a flat grey sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDk7M51dyB6QZv1VZM7zYDjLsy6E1qr6ejrd1B2KFiR7dHxqXGBgQpLrkR0d3Yu3mR_ulZcJaC_4skBrH6J45ZBfKdLFSb-Rb3696RoKryUx10rKu9gtJO2Nu4NHG7OSswU-NwqRcsi42EMW33WjeB-O4YCdqN848lRT-fJedA7MhXrqd2azfdSC0XenxwhwD8b8p1qBIebHwVe2WWgTIg1ACMlL1tHHPqlgn7HKz_7ahY0gX5OwGDrBKoxiqhRLSvgHnnVWcX7iT8"/>
+<div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end">
+<span class="text-on-primary text-xs font-bold tracking-[0.2em] uppercase block mb-2">SERIES NO. 03</span>
+<h2 class="text-on-primary text-xl font-bold tracking-tight">Vertical Ascent</h2>
+<span class="text-on-primary/60 text-xs tracking-widest uppercase mt-2">NEW YORK</span>
+</div>
+</article>
+<!-- Item 4 (Wide) -->
+<article class="col-span-1 md:col-span-2 group relative overflow-hidden bg-surface-container-low">
+<img alt="pavilion" class="w-full h-[500px] object-cover transition-transform duration-[1.5s] group-hover:scale-105 filter grayscale contrast-125" data-alt="stark black and white photo of a minimalist modern pavilion next to calm water reflecting the structure perfectly" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFt-scCwdJY3zN-yOQY1Tz7C3DPxDYNKhW71juBX1rOHEoLxouzm04rYme5fpBw1xkI_VAJyIVKOASvYBSTxY4SwM8v83zGR7ykvl9VuaLNrb0n2iWb1PA7xfReXuFb2fgsdRFNZKJhb72ljBOnH2N2zBUFJVoUDUN5ZmrqgUVPRTW077j8D9_Jrp13FoyOxijlE0aDcr8ypR-egT6wFPQs557T23gUi6ZSyNvA6KzhtvgXO--iQlDeqB_RH-gibN0EfI9dW2DNXU"/>
+<div class="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-black/80 to-transparent flex justify-between items-end">
+<div>
+<span class="text-on-primary text-xs font-bold tracking-[0.2em] uppercase block mb-2">SERIES NO. 04</span>
+<h2 class="text-on-primary text-2xl font-bold tracking-tight">Reflected Symmetry</h2>
+</div>
+<span class="text-on-primary/60 text-xs tracking-widest uppercase">OSLO</span>
+</div>
+</article>
+</div>
+<!-- Load More Section -->
+<div class="mt-20 flex justify-center w-full">
+<button class="bg-primary text-on-primary px-8 py-4 text-sm font-bold tracking-[0.1em] uppercase hover:bg-surface-container-low hover:text-primary transition-colors duration-300">
+                Load More
+            </button>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full rounded-none bg-zinc-100 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 font-['Inter'] text-xs tracking-[0.1em] uppercase flex flex-col md:flex-row justify-between items-center px-12 py-24 gap-8">
+<div class="font-bold text-zinc-900 dark:text-zinc-50">
+            © 2024 VOID &amp; VOLUME. THE SILENT ARCHITECT.
+        </div>
+<ul class="flex gap-8">
+<li><a class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-all cursor-pointer" href="#">INDEX</a></li>
+<li><a class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-all cursor-pointer" href="#">PHILOSOPHY</a></li>
+<li><a class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-all cursor-pointer" href="#">CONTACT</a></li>
+</ul>
+</footer>
+</body></html>

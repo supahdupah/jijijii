@@ -1,0 +1,10 @@
+# pnpm configuration
+
+# Use shamefully-hoist for monorepo/workspace compatibility
+shamefully-hoist=true
+
+# Use frozen-lockfile in CI environments
+# frozen-lockfile=true
+
+# Optional: Link workspace packages
+# link-workspace-packages=true

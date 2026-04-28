@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <title>Videos - jijijii</title>
+    <style>
+        body {
+            background-color: #f9f9f9;
+            color: #1a1c1c;
+            margin: 0;
+        }
+        
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 24px;
+            padding: 40px 20px;
+        }
+        
+        .video-card {
+            aspect-ratio: 16 / 9;
+            background: #e2e2e2;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .video-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        
+        .video-card iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .video-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-size: 48px;
+        }
+        
+        .fade-in {
+            animation: fadeInPage 0.6s ease-out;
+        }
+        
+        @keyframes fadeInPage {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="fade-in">
+    <!-- TopAppBar -->
+    <nav class="fixed top-0 w-full bg-white dark:bg-zinc-800 backdrop-blur-xl flex justify-center items-center px-4 sm:px-8 md:px-12 py-6 md:py-8 z-50 border-b border-zinc-200 dark:border-zinc-700">
+        <div class="text-lg sm:text-2xl font-black tracking-tighter text-zinc-900 dark:text-zinc-100">j i j i jii</div>
+        <div class="hidden md:flex gap-6 md:gap-12 absolute right-12">
+            <a class="font-inter tracking-tighter text-xs md:text-sm uppercase text-zinc-400 dark:text-zinc-600 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300" href="index.html">Back</a>
+        </div>
+    </nav>
+
+    <div class="pt-24 pb-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 md:px-12">
+            <h1 class="text-3xl md:text-4xl font-black tracking-tight text-zinc-900 dark:text-zinc-100 mb-2">Videos</h1>
+            <p class="text-zinc-400 dark:text-zinc-600 mb-12">Explore our collection</p>
+            
+            <div class="video-grid">
+                <!-- Video 1 -->
+                <div class="video-card">
+                    <div class="video-placeholder">
+                        <span class="material-symbols-outlined" style="font-size: 64px;">play_circle</span>
+                    </div>
+                </div>
+                
+                <!-- Video 2 -->
+                <div class="video-card">
+                    <div class="video-placeholder">
+                        <span class="material-symbols-outlined" style="font-size: 64px;">play_circle</span>
+                    </div>
+                </div>
+                
+                <!-- Video 3 -->
+                <div class="video-card">
+                    <div class="video-placeholder">
+                        <span class="material-symbols-outlined" style="font-size: 64px;">play_circle</span>
+                    </div>
+                </div>
+                
+                <!-- Video 4 -->
+                <div class="video-card">
+                    <div class="video-placeholder">
+                        <span class="material-symbols-outlined" style="font-size: 64px;">play_circle</span>
+                    </div>
+                </div>
+                
+                <!-- Video 5 -->
+                <div class="video-card">
+                    <div class="video-placeholder">
+                        <span class="material-symbols-outlined" style="font-size: 64px;">play_circle</span>
+                    </div>
+                </div>
+                
+                <!-- Video 6 -->
+                <div class="video-card">
+                    <div class="video-placeholder">
+                        <span class="material-symbols-outlined" style="font-size: 64px;">play_circle</span>
+                    </div>
+                </div>
+                
+                <!-- Video 7 -->
+                <div class="video-card">
+                    <div class="video-placeholder">
+                        <span class="material-symbols-outlined" style="font-size: 64px;">play_circle</span>
+                    </div>
+                </div>
+                
+                <!-- Video 8 -->
+                <div class="video-card">
+                    <div class="video-placeholder">
+                        <span class="material-symbols-outlined" style="font-size: 64px;">play_circle</span>
+                    </div>
+                </div>
+                
+                <!-- Video 9 -->
+                <div class="video-card">
+                    <div class="video-placeholder">
+                        <span class="material-symbols-outlined" style="font-size: 64px;">play_circle</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="border-t border-zinc-200 dark:border-zinc-700 flex flex-col md:flex-row justify-between px-4 sm:px-8 md:px-12 py-6 md:py-10 bg-white dark:bg-zinc-800 gap-4">
+        <div class="text-[8px] sm:text-[10px] tracking-[0.2em] uppercase text-zinc-400 dark:text-zinc-600">© 2026 || ZZ</div>
+        <div class="flex flex-wrap gap-4 sm:gap-6 md:gap-10">
+            <a class="text-[8px] sm:text-[10px] tracking-[0.2em] uppercase text-zinc-400 dark:text-zinc-600 hover:text-zinc-900 dark:hover:text-zinc-100 underline transition-all opacity-80 hover:opacity-100" href="#">Privacy</a>
+            <a class="text-[8px] sm:text-[10px] tracking-[0.2em] uppercase text-zinc-400 dark:text-zinc-600 hover:text-zinc-900 dark:hover:text-zinc-100 underline transition-all opacity-80 hover:opacity-100" href="#">Terms</a>
+            <a class="text-[8px] sm:text-[10px] tracking-[0.2em] uppercase text-zinc-400 dark:text-zinc-600 hover:text-zinc-900 dark:hover:text-zinc-100 underline transition-all opacity-80 hover:opacity-100" href="#">Archive</a>
+        </div>
+    </footer>
+
+    <script>
+        // Add click handlers to video cards - replace with actual video content
+        document.querySelectorAll('.video-card').forEach((card, index) => {
+            card.addEventListener('click', () => {
+                // You can add lightbox or video player functionality here
+                console.log('Video ' + (index + 1) + ' clicked');
+            });
+        });
+    </script>
+</body>
+</html>
