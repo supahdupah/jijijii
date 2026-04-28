@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 
 interface FlameButtonConfig {
@@ -8,16 +9,16 @@ interface FlameButtonConfig {
   label: string;
   left: string;
   top: string;
-  size: string;
+  large: boolean;
   href: string;
 }
 
 const flameButtons: FlameButtonConfig[] = [
-  { id: 0, label: 'Origin', left: '16.67%', top: '38%', size: 'text-2xl sm:text-3xl', href: '#' },
-  { id: 1, label: 'MAGS', left: '33.33%', top: '32%', size: 'text-2xl sm:text-3xl', href: '#' },
-  { id: 2, label: 'Legacy', left: '50%', top: '22%', size: 'text-3xl sm:text-4xl', href: '#' },
-  { id: 3, label: 'SHOOTS', left: '66.67%', top: '32%', size: 'text-2xl sm:text-3xl', href: '/photoshoots' },
-  { id: 4, label: 'CLOTHES', left: '83.33%', top: '38%', size: 'text-2xl sm:text-3xl', href: '#' },
+  { id: 0, label: 'Origin', left: '16.67%', top: '38%', large: false, href: '#' },
+  { id: 1, label: 'MAGS', left: '33.33%', top: '32%', large: false, href: '#' },
+  { id: 2, label: 'Legacy', left: '50%', top: '22%', large: true, href: '#' },
+  { id: 3, label: 'SHOOTS', left: '66.67%', top: '32%', large: false, href: '/photoshoots' },
+  { id: 4, label: 'CLOTHES', left: '83.33%', top: '38%', large: false, href: '#' },
 ];
 
 export default function Candelabra() {
@@ -50,6 +51,16 @@ export default function Candelabra() {
 
   return (
     <main className="relative w-full min-h-screen flex items-center justify-center bg-surface pt-32 md:pt-0 pb-32 md:pb-0" ref={containerRef}>
+      {/* Background video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+      >
+        <source src="/main/video10s.mp4" type="video/mp4" />
+      </video>
       <div className="relative w-full max-w-4xl aspect-[6/5] flex flex-col items-center justify-end px-4 sm:px-8 pb-16 md:pb-24">
         {/* SVG Candelabra Lines */}
         <svg
@@ -79,13 +90,13 @@ export default function Candelabra() {
               <span className="flame-label opacity-0 text-[8px] sm:text-[10px] tracking-[0.2em] uppercase mb-2 sm:mb-4 transition-all duration-500">
                 {btn.label}
               </span>
-              <span
-                className={`material-symbols-outlined flame-icon ${btn.size} ${
-                  btn.id === 2 ? 'text-zinc-900' : 'text-zinc-400'
-                } transition-all duration-500`}
-              >
-                local_fire_department
-              </span>
+              <Image
+                src="/main/star-button.png"
+                alt=""
+                width={btn.large ? 56 : 40}
+                height={btn.large ? 56 : 40}
+                className="flame-icon transition-all duration-500"
+              />
             </>
           );
 
