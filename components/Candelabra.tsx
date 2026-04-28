@@ -57,10 +57,19 @@ export default function Candelabra() {
         loop
         muted
         playsInline
-        className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+        className="absolute inset-0 w-full h-full object-cover pointer-events-none z-0"
       >
         <source src="/main/video10s.mp4" type="video/mp4" />
       </video>
+
+      {/* Left side image (PNG with transparency, above video) */}
+      <Image
+        src="/main/chndlr.png"
+        alt=""
+        width={400}
+        height={600}
+        className="absolute left-0 top-1/2 -translate-y-1/2 h-full w-auto object-contain pointer-events-none z-10"
+      />
       <div className="relative w-full max-w-4xl aspect-[6/5] flex flex-col items-center justify-end px-4 sm:px-8 pb-16 md:pb-24">
         {/* SVG Candelabra Lines */}
         <svg
