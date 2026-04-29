@@ -45,16 +45,28 @@ export default function Navigation() {
             The Flame
           </Link>
           <Link
-            href="#"
+            href="/wax"
             className="font-inter tracking-tighter text-xs md:text-sm uppercase text-zinc-400 dark:text-zinc-600 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300"
           >
             WAX
           </Link>
           <Link
-            href="#"
+            href="/wick"
             className="font-inter tracking-tighter text-xs md:text-sm uppercase text-zinc-400 dark:text-zinc-600 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300"
           >
             WICK
+          </Link>
+          <Link
+            href="/barrier"
+            className="font-inter tracking-tighter text-xs md:text-sm uppercase text-zinc-400 dark:text-zinc-600 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300"
+          >
+            BARRIER
+          </Link>
+          <Link
+            href="/rotating"
+            className="font-inter tracking-tighter text-xs md:text-sm uppercase text-zinc-400 dark:text-zinc-600 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300"
+          >
+            ROTATING
           </Link>
         </div>
         <button
@@ -76,18 +88,32 @@ export default function Navigation() {
               The Flame
             </Link>
             <Link
-              href="#"
+              href="/wax"
               className="font-inter tracking-tighter text-sm uppercase text-zinc-400 dark:text-zinc-600 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300"
               onClick={() => setMobileMenuOpen(false)}
             >
               WAX
             </Link>
             <Link
-              href="#"
+              href="/wick"
               className="font-inter tracking-tighter text-sm uppercase text-zinc-400 dark:text-zinc-600 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300"
               onClick={() => setMobileMenuOpen(false)}
             >
               WICK
+            </Link>
+            <Link
+              href="/barrier"
+              className="font-inter tracking-tighter text-sm uppercase text-zinc-400 dark:text-zinc-600 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              BARRIER
+            </Link>
+            <Link
+              href="/rotating"
+              className="font-inter tracking-tighter text-sm uppercase text-zinc-400 dark:text-zinc-600 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              ROTATING
             </Link>
           </div>
         </div>
