@@ -3,6 +3,8 @@ import './globals.css'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import { Inter } from 'next/font/google'
+import { VaseProvider } from '@/context/VaseContext'
+import VaseCompletionPopup from '@/components/VaseCompletionPopup'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -28,9 +30,12 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.className} font-body selection:bg-surface-container-high overflow-hidden`}>
-        <Navigation />
-        {children}
-        <Footer />
+        <VaseProvider>
+          <Navigation />
+          {children}
+          <Footer />
+          <VaseCompletionPopup />
+        </VaseProvider>
       </body>
     </html>
   )

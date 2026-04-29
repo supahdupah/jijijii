@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import CollectibleVase from './CollectibleVase';
 
 export default function MouseDistortionEffect() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -137,11 +136,6 @@ export default function MouseDistortionEffect() {
   return (
     <div className="relative h-screen w-full overflow-hidden">
       <div ref={containerRef} className="h-full w-full" />
-      <CollectibleVase
-        id="distortion-vase"
-        size={36}
-        className="bottom-[16%] left-[17%] rotate-[9deg]"
-      />
     </div>
   );
 }

@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import CollectibleVase from './CollectibleVase';
 
 interface Photoshoot {
   id: string;
@@ -43,11 +42,6 @@ export default function PhotoshootsGrid() {
     <>
       {/* Grid */}
       <div className="fixed inset-0 overflow-y-auto pt-20 pb-20 bg-surface">
-        <CollectibleVase
-          id="photoshoots-grid-vase"
-          size={34}
-          className="right-[9%] top-[18%] rotate-[12deg]"
-        />
         <div className="max-w-4xl mx-auto px-4 sm:px-8 py-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-zinc-200">
             {photoshoots.map((shoot) => (

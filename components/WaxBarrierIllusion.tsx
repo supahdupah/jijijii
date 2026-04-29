@@ -1,8 +1,6 @@
 "use client";
 
-import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import { useVases } from "@/context/VaseContext";
 
 const STRIPE_WIDTH = 14;
 
@@ -10,8 +8,6 @@ export default function WaxBarrierIllusion() {
   const scrollRef = useRef<HTMLElement | null>(null);
   const frameRef = useRef<number | null>(null);
   const [scrollTop, setScrollTop] = useState(0);
-  const { collectVase, isCollected } = useVases();
-  const collected = isCollected("wax-vase");
 
   useEffect(() => {
     const node = scrollRef.current;
@@ -39,9 +35,6 @@ export default function WaxBarrierIllusion() {
   }, []);
 
   const travel = scrollTop % (STRIPE_WIDTH * 2);
-  const centeredTravel = Math.abs(travel - STRIPE_WIDTH);
-  const reveal = Math.max(0, 1 - centeredTravel / 5);
-  const interactionReady = reveal > 0.42;
 
   return (
     <main
@@ -60,52 +53,17 @@ export default function WaxBarrierIllusion() {
             </h1>
             <div className="mx-auto mt-8 h-px w-44 bg-zinc-200" />
 
-            <button
-              type="button"
-              aria-label="Collect hidden wax vase"
-              disabled={collected}
-              onClick={() => collectVase("wax-vase")}
-              className={`group absolute left-1/2 top-1/2 z-40 h-40 w-32 -translate-x-1/2 translate-y-16 focus:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900/40 sm:h-48 sm:w-40 ${
-                collected ? "pointer-events-none" : ""
-              }`}
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute left-1/2 top-1/2 z-50 h-40 w-32 -translate-x-1/2 translate-y-16 overflow-hidden border-x border-zinc-950/20 sm:h-48 sm:w-40"
               style={{
-                opacity: collected ? 0 : 1,
-                pointerEvents: interactionReady && !collected ? "auto" : "none",
+                backgroundImage:
+                  "repeating-linear-gradient(90deg, rgba(249,249,249,0.98) 0 10px, rgba(26,28,28,0.88) 10px 14px)",
+                transform: `translate(-50%, 4rem) translateX(${
+                  STRIPE_WIDTH - travel
+                }px)`,
               }}
-            >
-              <span className="absolute inset-0 overflow-hidden">
-                <Image
-                  src="/main/vase.svg"
-                  alt=""
-                  width={160}
-                  height={192}
-                  priority
-                  className="h-full w-full object-contain drop-shadow-sm transition duration-300 group-hover:scale-105"
-                  style={{
-                    opacity: 0.15 + reveal * 0.72,
-                    transform: `translateX(${travel - STRIPE_WIDTH}px)`,
-                    WebkitMaskImage:
-                      "repeating-linear-gradient(90deg, #000 0 4px, transparent 4px 14px)",
-                    maskImage:
-                      "repeating-linear-gradient(90deg, #000 0 4px, transparent 4px 14px)",
-                  }}
-                />
-              </span>
-            </button>
-
-            {!collected && (
-              <div
-                aria-hidden="true"
-                className="pointer-events-none absolute left-1/2 top-1/2 z-50 h-40 w-32 -translate-x-1/2 translate-y-16 overflow-hidden border-x border-zinc-950/20 sm:h-48 sm:w-40"
-                style={{
-                  backgroundImage:
-                    "repeating-linear-gradient(90deg, rgba(249,249,249,0.98) 0 10px, rgba(26,28,28,0.88) 10px 14px)",
-                  transform: `translate(-50%, 4rem) translateX(${
-                    STRIPE_WIDTH - travel
-                  }px)`,
-                }}
-              />
-            )}
+            />
           </div>
         </section>
         <div className="absolute bottom-10 left-1/2 h-24 w-px -translate-x-1/2 bg-zinc-200" />

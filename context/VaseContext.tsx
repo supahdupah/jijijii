@@ -9,7 +9,13 @@ import {
   type ReactNode,
 } from "react";
 
-export const TOTAL_VASES = 3;
+export const COLLECTIBLE_VASE_IDS = [
+  "home-flame-vase",
+  "rotating-vase",
+  "wick-vase",
+] as const;
+
+export const TOTAL_VASES = COLLECTIBLE_VASE_IDS.length;
 
 type VaseContextValue = {
   collected: string[];
@@ -18,6 +24,7 @@ type VaseContextValue = {
 };
 
 const STORAGE_KEY = "jijijii-session-collected-vases";
+const validVaseIds = new Set<string>(COLLECTIBLE_VASE_IDS);
 
 const VaseContext = createContext<VaseContextValue | null>(null);
 
@@ -29,7 +36,10 @@ export function VaseProvider({ children }: { children: ReactNode }) {
     const saved = window.sessionStorage.getItem(STORAGE_KEY);
     if (saved) {
       try {
-        setCollected(JSON.parse(saved));
+        const parsed = JSON.parse(saved);
+        if (Array.isArray(parsed)) {
+          setCollected(parsed.filter((id) => validVaseIds.has(id)));
+        }
       } catch {
         window.sessionStorage.removeItem(STORAGE_KEY);
       }
@@ -46,6 +56,7 @@ export function VaseProvider({ children }: { children: ReactNode }) {
     () => ({
       collected,
       collectVase: (id) => {
+        if (!validVaseIds.has(id)) return;
         setCollected((current) =>
           current.includes(id) ? current : [...current, id]
         );

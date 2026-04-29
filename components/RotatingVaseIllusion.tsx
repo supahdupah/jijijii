@@ -1,7 +1,7 @@
 "use client";
 
 import { PointerEvent, useEffect, useRef, useState } from "react";
-import { useVases } from "@/context/VaseContext";
+import CollectibleVase from "./CollectibleVase";
 
 const WHEEL_SPEED = 0.3;
 const DRAG_SPEED = 1;
@@ -20,10 +20,6 @@ export default function RotatingVaseIllusion() {
   const animationRef = useRef<number | null>(null);
   const [tilt, setTilt] = useState({ x: 0, y: 0 });
   const [barOffset, setBarOffset] = useState(BAR_START_OFFSET);
-
-  const { collectVase, collected } = useVases();
-  const vaseId = "illusion-vase";
-  const isCollected = collected.includes(vaseId);
 
   useEffect(() => {
     const handleMouseMove = (event: MouseEvent) => {
@@ -76,18 +72,12 @@ export default function RotatingVaseIllusion() {
     };
   }, []);
 
-  const handleClick = () => {
-    if (dragRef.current.moved) {
-      dragRef.current.moved = false;
+  const handlePointerDown = (event: PointerEvent<HTMLDivElement>) => {
+    // Don't handle drag if clicking on the collectible vase
+    if ((event.target as HTMLElement).closest('[aria-label="Collect vase"]')) {
       return;
     }
 
-    if (!isCollected) {
-      collectVase(vaseId);
-    }
-  };
-
-  const handlePointerDown = (event: PointerEvent<HTMLDivElement>) => {
     velocityRef.current = 0;
     if (animationRef.current !== null) {
       window.cancelAnimationFrame(animationRef.current);
@@ -134,10 +124,7 @@ export default function RotatingVaseIllusion() {
       style={{ cursor: "grab", touchAction: "none" }}
     >
       <section className="flex min-h-screen items-center justify-center px-6">
-          <button
-            type="button"
-            aria-label="Collect wheel kinegram illusion"
-            onClick={handleClick}
+          <div
             className="relative block overflow-hidden border-0 bg-transparent p-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900/40"
             style={{
               width: "min(82vw, 760px)",
@@ -168,7 +155,12 @@ export default function RotatingVaseIllusion() {
                 willChange: "background-position",
               }}
             />
-          </button>
+          </div>
+          <CollectibleVase
+            id="rotating-vase"
+            size={38}
+            className="bottom-[18%] right-[18%] rotate-[11deg]"
+          />
       </section>
     </div>
   );
