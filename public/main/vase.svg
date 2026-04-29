@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 80" role="img" aria-label="Vase">
+  <path d="M24 7h16l-3 17c8 5 14 14 14 26 0 16-8 25-19 25S13 66 13 50c0-12 6-21 14-26L24 7Z" fill="#f9f9f9" stroke="#1a1c1c" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M25 7h14M27 24h10M19 51c4 5 9 7 13 7s9-2 13-7" fill="none" stroke="#1a1c1c" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M28 35c4 2 7 2 11 0" fill="none" stroke="#d7a54b" stroke-width="2" stroke-linecap="round"/>
+</svg>

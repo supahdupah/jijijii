@@ -1,0 +1,78 @@
+import type { Config } from 'tailwindcss'
+
+const config: Config = {
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
+  theme: {
+    extend: {
+      colors: {
+        "on-secondary-fixed-variant": "#3b3b3b",
+        "on-surface-variant": "#474747",
+        "surface-container-highest": "#e2e2e2",
+        "on-primary": "#e2e2e2",
+        "inverse-primary": "#c6c6c6",
+        "outline": "#777777",
+        "surface-container": "#eeeeee",
+        "secondary-container": "#d4d4d4",
+        "tertiary-fixed": "#5e5e5e",
+        "inverse-on-surface": "#f0f1f1",
+        "surface-bright": "#f9f9f9",
+        "primary-fixed": "#5e5e5e",
+        "tertiary-fixed-dim": "#474747",
+        "inverse-surface": "#2f3131",
+        "on-primary-fixed-variant": "#e2e2e2",
+        "surface-variant": "#e2e2e2",
+        "primary-fixed-dim": "#474747",
+        "on-tertiary": "#e2e2e2",
+        "error": "#ba1a1a",
+        "on-error": "#ffffff",
+        "surface-dim": "#dadada",
+        "surface-container-high": "#e8e8e8",
+        "primary-container": "#3b3b3b",
+        "surface-container-lowest": "#ffffff",
+        "secondary-fixed-dim": "#ababab",
+        "on-tertiary-fixed-variant": "#e2e2e2",
+        "tertiary": "#3b3b3b",
+        "surface-container-low": "#f3f3f4",
+        "surface-tint": "#5e5e5e",
+        "on-secondary-container": "#1b1b1b",
+        "primary": "#000000",
+        "on-background": "#1a1c1c",
+        "tertiary-container": "#747474",
+        "outline-variant": "#c6c6c6",
+        "background": "#f9f9f9",
+        "error-container": "#ffdad6",
+        "on-tertiary-container": "#ffffff",
+        "on-secondary-fixed": "#1b1b1b",
+        "on-primary-container": "#ffffff",
+        "on-error-container": "#410002",
+        "on-tertiary-fixed": "#ffffff",
+        "secondary-fixed": "#c6c6c6",
+        "on-primary-fixed": "#ffffff",
+        "on-secondary": "#ffffff",
+        "on-surface": "#1a1c1c",
+        "surface": "#f9f9f9",
+        "secondary": "#5e5e5e"
+      },
+      fontFamily: {
+        "headline": ["Inter", "sans-serif"],
+        "body": ["Inter", "sans-serif"],
+        "label": ["Inter", "sans-serif"],
+      },
+      borderRadius: {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+    },
+  },
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/container-queries'),
+  ],
+}
+export default config
